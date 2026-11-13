@@ -1,18 +1,18 @@
 # Publicar un ensayo
 
-Los PDF de los ensayos se guardan en esta carpeta y se enlazan desde la sección **Essays / Ensayos** de la página principal.
+Los PDF de los ensayos se guardan en esta carpeta y se enlazan desde la página **Essays / Ensayos**.
 
 ## Desde GitHub
 
 1. Abre esta carpeta en el repositorio y selecciona **Add file → Upload files**.
 2. Sube el PDF con un nombre sencillo, sin espacios ni acentos, por ejemplo `libre-albedrio.pdf`, y guarda el cambio en `main`.
-3. Edita `index.html` en la raíz del repositorio y busca `<section id="essays"`.
-4. Copia el siguiente bloque dentro de esa sección, fuera del comentario HTML. Sustituye el título, la fecha, el idioma, la descripción y las dos rutas por los datos del ensayo.
-5. Al publicar el primero, elimina el párrafo con `id="essays-empty"`. Guarda el cambio en `main` y espera a que GitHub Pages termine de publicar.
+3. Edita `essays.html` en la raíz del repositorio.
+4. Copia el siguiente bloque debajo de la introducción. Sustituye el título, la fecha, el idioma, la descripción y las dos rutas por los datos del ensayo.
+5. Guarda el cambio en `main` y espera a que GitHub Pages termine de publicar.
 
 ```html
 <article class="history-item" lang="es">
-  <h3>Título del ensayo</h3>
+  <h2>Título del ensayo</h2>
   <p class="meta"><time datetime="2026-10-31">31 de octubre de 2026</time> · Español</p>
   <p>Una breve descripción del ensayo.</p>
   <ul class="links-list">

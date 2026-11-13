@@ -1,19 +1,18 @@
-// Keep bookmarks to the original single-page site working.
+// Preserve bookmarks to sections that still exist.
 const oldSections = new Map([
-  ["#research", "academic-profile.html#research"],
   ["#publications", "articles-preprints.html"],
   ["#essays", "essays.html"],
   ["#talks", "invited-talks.html"],
+  ["#posters", "invited-talks.html"],
+  ["#conference-talks", "invited-talks.html"],
   ["#conferences", "conferences.html"],
-  ["#career", "academic-profile.html#career"],
-  ["#teaching", "academic-profile.html#teaching"],
-  ["#beyond", "academic-profile.html#beyond"],
+  ["#workshops", "conferences.html"],
   ["#contact", "contact.html"],
 ]);
 
 function redirectOldSection() {
   const destination = oldSections.get(window.location.hash);
-  if (destination) {
+  if (destination && new URL(destination, window.location.href).pathname !== window.location.pathname) {
     window.location.replace(destination);
   }
 }

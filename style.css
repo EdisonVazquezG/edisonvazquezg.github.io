@@ -1,170 +1,94 @@
-:root {
-  --text: #222;
-  --muted: #565e68;
-  --link: #24549b;
-  --rule: #dce1e7;
-}
-
 body {
   margin: 0;
   background: #fff;
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
+  color: #111;
+  font: 1.125rem/1.35 Arial, Helvetica, sans-serif;
 }
 
 main {
-  max-width: 42rem;
+  max-width: 53rem;
   margin-inline: auto;
-  padding: clamp(2rem, 7vw, 4.5rem) 1.5rem 4rem;
-}
-
-h1, h2, h3 {
-  line-height: 1.25;
+  padding: clamp(1.25rem, 5vw, 3rem) 1.25rem 3rem;
 }
 
 h1 {
-  margin: 0 0 1.75rem;
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  letter-spacing: -0.035em;
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.25rem);
+  line-height: 1.15;
 }
 
 h2 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
-}
-
-h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.06rem;
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
 }
 
 p {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.8rem;
 }
 
 a {
-  color: var(--link);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  color: #0000c8;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #551a8b;
 }
 
 a:hover {
-  color: #16376a;
+  text-decoration: underline;
 }
 
 a:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 4px;
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
-.profile-header {
+.profile {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.profile-header h1 {
-  margin-bottom: 0.65rem;
-}
-
-.profile-photo {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 5px;
+.profile img {
   object-fit: cover;
 }
 
-.affiliation {
-  margin: 0.25rem 0;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.5;
+.profile h1 {
+  margin: 0;
 }
 
-.site-links {
-  display: grid;
-  gap: 0.65rem;
+#about {
+  max-width: 42rem;
+}
+
+.navigation,
+.entries {
   list-style: none;
-  margin: 1.8rem 0 0;
-  padding: 1.4rem 0 0;
-  border-top: 1px solid var(--rule);
-}
-
-.site-links a {
-  display: inline-block;
-  padding-block: 0.15rem;
-}
-
-.home-link {
-  margin-bottom: 1.4rem;
-  font-size: 0.93rem;
-}
-
-section + section {
-  margin-top: 2rem;
-  padding-top: 1.4rem;
-  border-top: 1px solid var(--rule);
-}
-
-section[id] {
-  scroll-margin-top: 1.5rem;
-}
-
-.history-item + .history-item,
-.publication-item + .publication-item {
-  margin-top: 1.25rem;
-}
-
-.history-item h2 {
-  margin-bottom: 0.35rem;
-  font-size: 1.06rem;
-}
-
-.history-item p {
-  margin-top: 0.25rem;
-}
-
-.history-title {
-  font-weight: 600;
-}
-
-.meta, .entry-label {
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.entry-label {
-  margin-bottom: 0.2rem;
-}
-
-.related-link {
-  margin-top: 2rem;
-}
-
-.links-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-@media (max-width: 520px) {
-  .profile-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .profile-photo {
-    width: 6rem;
-    height: 6rem;
-  }
+.navigation {
+  margin-top: 1.5rem;
 }
 
-.subheading {
-  margin-top: 1.4rem;
+.navigation li + li {
+  margin-top: 0.55rem;
+}
+
+.entries li + li {
+  margin-top: 0.9rem;
+}
+
+.back {
+  margin-bottom: 1.15rem;
+  font-size: 1rem;
+}
+
+.detail {
+  display: inline-block;
 }
